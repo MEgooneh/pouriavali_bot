@@ -48,6 +48,8 @@ def handle_photo_as_document(m):
     [...]
 ```
 
+## f.txt & t.txt
+
 ## License: GPLv3
 ```
 This program is free software: you can redistribute it and/or modify
