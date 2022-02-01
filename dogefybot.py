@@ -117,7 +117,7 @@ def handle_photo(m):
         # Upload the photo and do it as a reply
         bot.send_photo(cid,
                        open(f_id+img_ext, 'rb'),
-                       caption='Very wow, such doge%s.' %
+                       caption='یا علیییی مدد%s.' %
                        ('s' if n_faces > 1 else ''))
 
         try:
@@ -128,7 +128,7 @@ def handle_photo(m):
     # If there is no faces and is not a group tell the user
     elif cid > 0:
         bot.send_chat_action(cid, 'typing')
-        bot.send_message(cid, 'Very fail, such sad, no faces.')
+        bot.send_message(cid, 'چهره ای در عکس شناسایی نشد. لطفا عکس با کیفیت و واضح بفرستید. یا علیییی مدد')
 
     try:
         os.unlink(f_id)
@@ -145,18 +145,12 @@ def handle_start_help(m):
 
     bot.send_chat_action(m.chat.id, 'typing')
     bot.send_message(m.chat.id,
-                     ("Hi, I search for faces in sent photos and if I find "
-                      "any I replace them for *doges*. _Very wow._"
-                      "\n\nPlease rate me at the @storebot following this "
-                      "link: https://telegram.me/storebot?start=dogefy\_bot\n"
-                      "\nQ: Why do I need _access to messages_?\n"
-                      "A: In order to get images sent to groups I need it. "
-                      "I don't like it either, I would prefer a system where "
-                      "bot developers can register _atomic permissions_ like "
-                      "_get-image_, _send-image_, _get-audio_, _send-audio_, "
-                      "...\n"
-                      "\nThe source code is licensed under _GPLv3_ and can be "
-                      "found at https://github.com/skgsergio/dogefy-tg-bot"),
+                     ("سلام . عکسایی که توش چهره واضح باشه عکس پوریای لات به جاش گذاشته میشه."
+                      "سعی بشه تا حد امکان چهره تو عکس واضح باشه و عکس بی کیفیت نباشه."
+                      "همچنین میتونید این بات رو به گروه هاتون اد کنید. برای اینکار باید بهش دسترسی بدید تا بتونه هر عکسی که فرستاده شد و توش چهره پیدا شد رو با پوریای لات عوض کنه."
+                      "در ضمن رای بدید به فیلم پهلوانان :"
+                      "[https://www.imdb.com/title/tt7657124/ratings/?ref_=tt_ov_rt](لینک imdb)"
+                      ),
                      disable_web_page_preview=True,
                      parse_mode="Markdown")
 
