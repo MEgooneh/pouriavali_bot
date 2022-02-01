@@ -144,6 +144,34 @@ def handle_start_help(m):
         return
 
     bot.send_chat_action(m.chat.id, 'typing')
+        # Python program for reading
+    # from file
+
+
+    h = open('t.txt', 'r')
+
+    # Reading from the file
+    content = h.readlines()
+
+    # Variable for storing the sum
+    a = 0
+
+    # Iterating through the content
+    # Of the file
+    for line in content:
+
+        for i in line:
+
+            # Checking for the digit in
+            # the string
+            if i.isdigit() == True:
+
+                a += int(i)
+
+    a += 1
+    h.close()
+    h = open(t.txt , 'w')
+    h.write(str(a))
     bot.send_message(m.chat.id,
                      ("سلام . عکسایی که توش چهره واضح باشه عکس پوریای لات به جاش گذاشته میشه. \n"
                       "سعی بشه تا حد امکان چهره تو عکس واضح باشه و عکس بی کیفیت نباشه. \n"
